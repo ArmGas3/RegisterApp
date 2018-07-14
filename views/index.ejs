@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register app</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<% if (data.register === true) { %>
+
+    <h1>You have successfully created your account</h1>
+
+<% } else { %>
+
+
+<div class="materialContainer">
+    <div class="box">
+
+        <div class="title">LOGIN</div>
+
+        <form method="post" action="/login">
+
+            <div class="input">
+                <label for="name">Username</label>
+                <input autocomplete="off" type="text" name="login" id="name">
+                <span class="spin"></span>
+            </div>
+
+            <div class="input">
+                <label for="pass">Password</label>
+                <input type="password" name="password" id="pass">
+                <span class="spin"></span>
+            </div>
+
+            <div class="button login">
+                <input type="submit" value="login" />
+            </div>
+        </form>
+
+    </div>
+
+    <form action="/register" method="post">
+        <div class="overbox">
+            <div class="material-button alt-2"><span class="shape"></span></div>
+
+            <div class="title">REGISTER</div>
+
+            <div class="input">
+                <label for="regname">Username</label>
+                <input autocomplete="off" type="text" name="regname" id="regname">
+                <span class="spin"></span>
+            </div>
+
+            <div class="input">
+                <label for="regpass">Password</label>
+                <input type="password" name="regpass" id="regpass">
+                <span class="spin"></span>
+            </div>
+
+            <div class="button register">
+                <input type="submit" value="register" />
+            </div>
+
+
+        </div>
+    </form>
+
+</div>
+
+<% } %>
+<script src="anim.js"></script>
+</body>
+</html>
